@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- PROMFI v5.0.1 — 2026-09-21 -->
+        <title>myTitle</title>
+        <style>
+            section{
+                border: 1px solid gray;
+                padding: 10px;
+                margin: 10px;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1 id="appTitle">myHeader</h1></header>
+        <section>
+            <h2>
+                The thing that has things inside it
+            </h2>
+            <section>
+                <h3>2. a thing</h3>
+                <div>
+                    <button id="myButton">
+                        myButton
+                    </button>
+                    <textarea>myText</textarea>
+                </div>
+            </section>
+        </section>
+        <script>
+            const APPNAME = "PROMFI";
+            const VERSION = "5.0.1";
+
+            document.title = APPNAME + " v" + VERSION;
+            document.getElementById("appTitle").textContent = APPNAME + " v" + VERSION;
+
+            const button = document.getElementById("myButton");
+
+            button.addEventListener("click", function(){
+                alert("clicked!");
+            });
+        </script>
+    </body>
+</html>
